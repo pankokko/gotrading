@@ -1,0 +1,45 @@
+2020/11/03 19:49:25 main.go:12: test
+2020/11/03 19:50:25 main.go:12: aaaaaaaaaaaa
+2020/11/03 20:38:23 bitflyer.go:32: 1604403503
+2020/11/03 20:38:24 bitflyer.go:100: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 20:40:26 bitflyer.go:32: 1604403626
+2020/11/03 20:40:26 bitflyer.go:100: action=GetBalance err=invalid character '<' looking for beginning of value
+2020/11/03 20:42:27 bitflyer.go:32: 1604403747
+2020/11/03 20:42:27 bitflyer.go:100: action=GetBalance err=invalid character '<' looking for beginning of value
+2020/11/03 20:43:07 bitflyer.go:32: 1604403787
+2020/11/03 20:47:17 bitflyer.go:32: 1604404037
+2020/11/03 20:47:17 bitflyer.go:100: action=GetBalance err=invalid character '<' looking for beginning of value
+2020/11/03 20:47:26 bitflyer.go:32: 1604404046
+2020/11/03 20:47:26 bitflyer.go:100: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:14:00 bitflyer.go:32: 1604405640
+2020/11/03 21:14:00 bitflyer.go:100: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:15:33 bitflyer.go:32: 1604405733
+2020/11/03 21:15:33 bitflyer.go:101: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:17:35 bitflyer.go:32: 1604405820
+2020/11/03 21:20:12 bitflyer.go:32: 1604406012
+2020/11/03 21:25:35 bitflyer.go:100: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:26:17 bitflyer.go:32: 1604406377
+2020/11/03 21:26:17 bitflyer.go:32: 1604406377
+2020/11/03 21:26:18 bitflyer.go:102: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:26:42 bitflyer.go:32: 1604406402
+2020/11/03 21:26:42 bitflyer.go:32: 1604406402
+2020/11/03 21:26:42 bitflyer.go:102: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:27:12 bitflyer.go:32: 1604406432
+2020/11/03 21:27:12 bitflyer.go:32: 1604406432
+2020/11/03 21:27:12 bitflyer.go:102: action=GetBalance err=json: cannot unmarshal object into Go value of type []bitflyer.Balance
+2020/11/03 21:38:57 bitflyer.go:32: 1604407137
+2020/11/03 21:40:06 bitflyer.go:32: 1604407206
+2020/11/03 21:40:29 bitflyer.go:32: 1604407229
+2020/11/03 21:40:29 bitflyer.go:126: action=GetMarket err=json: Unmarshal(non-pointer []bitflyer.Market)
+2020/11/03 21:40:42 bitflyer.go:32: 1604407242
+2020/11/03 21:43:43 bitflyer.go:32: 1604407423
+2020/11/03 21:46:07 bitflyer.go:32: 1604407567
+2020/11/03 21:47:36 bitflyer.go:32: 1604407656
+2020/11/03 21:47:49 bitflyer.go:32: 1604407669
+2020/11/03 21:48:25 bitflyer.go:32: 1604407705
+2020/11/03 21:50:34 bitflyer.go:32: 1604407834
+2020/11/03 21:51:16 bitflyer.go:32: 1604407876
+2020/11/03 21:51:23 bitflyer.go:32: 1604407883
+2020/11/03 21:52:31 bitflyer.go:32: 1604407951
+2020/11/03 21:53:19 bitflyer.go:32: 1604407999
+2020/11/03 21:54:51 bitflyer.go:32: 1604408091
