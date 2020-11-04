@@ -43,3 +43,46 @@
 2020/11/03 21:52:31 bitflyer.go:32: 1604407951
 2020/11/03 21:53:19 bitflyer.go:32: 1604407999
 2020/11/03 21:54:51 bitflyer.go:32: 1604408091
+2020/11/04 21:20:47 bitflyer.go:32: 1604492447
+2020/11/04 21:38:27 bitflyer.go:32: 1604493507
+2020/11/04 21:38:27 bitflyer.go:175: action=GetMarket err=json: cannot unmarshal number 0.0 into Go struct field Ticker.market_bid_size of type int
+2020/11/04 21:40:43 bitflyer.go:32: 1604493643
+2020/11/04 21:40:43 bitflyer.go:175: action=GetMarket err=json: cannot unmarshal number 0.0 into Go struct field Ticker.market_bid_size of type int
+2020/11/04 21:44:43 bitflyer.go:32: 1604493883
+2020/11/04 21:44:44 bitflyer.go:175: action=GetMarket err=json: cannot unmarshal number 0.0 into Go struct field Ticker.market_bid_size of type int
+2020/11/04 21:44:54 bitflyer.go:32: 1604493894
+2020/11/04 21:44:54 bitflyer.go:175: action=GetMarket err=json: cannot unmarshal number 0.0 into Go struct field Ticker.market_bid_size of type int
+2020/11/04 21:45:45 bitflyer.go:32: 1604493945
+2020/11/04 21:45:45 bitflyer.go:175: action=GetMarket err=json: cannot unmarshal number 13722.54 into Go struct field Ticker.ltp of type int
+2020/11/04 21:46:13 bitflyer.go:32: 1604493973
+2020/11/04 21:46:30 bitflyer.go:32: 1604493990
+2020/11/04 21:51:08 bitflyer.go:32: 1604494268
+2020/11/04 21:51:49 bitflyer.go:32: 1604494309
+2020/11/04 21:53:05 bitflyer.go:32: 1604494385
+2020/11/04 21:53:28 bitflyer.go:32: 1604494408
+2020/11/04 21:53:43 bitflyer.go:32: 1604494423
+2020/11/04 21:53:54 bitflyer.go:32: 1604494434
+2020/11/04 21:54:46 bitflyer.go:32: 1604494486
+2020/11/04 21:55:43 bitflyer.go:32: 1604494543
+2020/11/04 21:56:02 bitflyer.go:32: 1604494562
+2020/11/04 21:56:27 bitflyer.go:32: 1604494587
+2020/11/04 21:56:52 bitflyer.go:32: 1604494612
+2020/11/04 21:57:29 bitflyer.go:32: 1604494649
+2020/11/04 21:58:02 bitflyer.go:32: 1604494682
+2020/11/04 21:58:20 bitflyer.go:32: 1604494700
+2020/11/04 21:58:53 bitflyer.go:31: 1604494733
+2020/11/04 21:58:56 bitflyer.go:31: 1604494736
+2020/11/04 21:59:07 bitflyer.go:31: 1604494747
+2020/11/04 21:59:38 bitflyer.go:31: 1604494778
+2020/11/04 21:59:56 bitflyer.go:31: 1604494796
+2020/11/04 22:00:59 bitflyer.go:31: 1604494859
+2020/11/04 22:02:36 bitflyer.go:31: 1604494956
+2020/11/04 22:03:11 bitflyer.go:31: 1604494991
+2020/11/04 22:03:20 bitflyer.go:31: 1604495000
+2020/11/04 22:03:28 bitflyer.go:31: 1604495008
+2020/11/04 22:03:47 bitflyer.go:31: 1604495027
+2020/11/04 22:03:55 bitflyer.go:31: 1604495035
+2020/11/04 22:04:22 bitflyer.go:31: 1604495062
+2020/11/04 22:04:34 bitflyer.go:31: 1604495074
+2020/11/04 22:04:49 bitflyer.go:31: 1604495089
+2020/11/04 22:05:30 bitflyer.go:32: 1604495130

@@ -6,7 +6,6 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -54,17 +53,20 @@ func (api *APIClient) doRequest(method, urlPath string, query map[string]string,
 	}
 
 	endPoint := baseURL.ResolveReference(apiURL).String()
-	fmt.Println(endPoint)
 
 	req, err := http.NewRequest(method, endPoint, bytes.NewBuffer(data))
 	if err != nil {
 		return
 	}
 	q := req.URL.Query()
+
 	for key, value := range query {
 		q.Add(key, value)
 	}
+
+	//Struct名URLのプロパティRawQueryに product_code=BTC_USD をセットしている
 	req.URL.RawQuery = q.Encode()
+
 	for key, value := range api.header(method, req.URL.RequestURI(), data) {
 		req.Header.Add(key, value)
 	}
@@ -103,12 +105,12 @@ func (api *APIClient) GetBalance() ([]Balance, error) {
 	return balance, nil
 }
 
-//自分で認証の必要ないAPIにアクセスしてみる
+//認証の必要ないAPIにアクセスしてみる
 //"v1/markets"にしてみる
 
 type Market struct {
 	PRODUCT_CODE string `json:"product_code"`
-	MARKET_TYPE string `json:"market_type"`
+	MARKET_TYPE  string `json:"market_type"`
 }
 
 func (api *APIClient) GetMarket() ([]Market, error) {
@@ -118,7 +120,6 @@ func (api *APIClient) GetMarket() ([]Market, error) {
 		log.Printf("action=GetMarket err=%s", err.Error())
 		return nil, err
 	}
-	fmt.Println(string(resp))
 	var Market []Market
 	err = json.Unmarshal(resp, &Market)
 	if err != nil {
@@ -128,12 +129,52 @@ func (api *APIClient) GetMarket() ([]Market, error) {
 	return Market, nil
 }
 
+type Ticker struct {
+	ProductCode     string  `json:"product_code"`
+	State           string  `json:"state"`
+	Timestamp       string  `json:"timestamp"`
+	TickID          int     `json:"tick_id"`
+	BestBid         float64 `json:"best_bid"`
+	BestAsk         float64 `json:"best_ask"`
+	BestBidSize     float64 `json:"best_bid_size"`
+	BestAskSize     float64 `json:"best_ask_size"`
+	TotalBidDepth   float64 `json:"total_bid_depth"`
+	TotalAskDepth   float64 `json:"total_ask_depth"`
+	MarketBidSize   float64 `json:"market_bid_size"`
+	MarketAskSize   float64 `json:"market_ask_size"`
+	Ltp             float64 `json:"ltp"`
+	Volume          float64 `json:"volume"`
+	VolumeByProduct float64 `json:"volume_by_product"`
+}
 
+func (t *Ticker) GetMidPrice() float64 {
+	return (t.BestBid + t.BestAsk) / 2
+}
 
+func (t *Ticker) DateTIme() time.Time {
+	dateTime, err := time.Parse(time.RFC3339, t.Timestamp)
+	if err != nil {
+		log.Printf("action=DateTIme, err=%s", err.Error())
+	}
+	return dateTime
+}
 
+func (t *Ticker) TruncateDateTIme(duration time.Duration) time.Time {
+	return t.DateTIme().Truncate(duration)
+}
 
-
-
-
-
-
+func (api *APIClient) GetTicker(productCode string) (*Ticker, error) {
+	url := "v1/ticker"
+	resp, err := api.doRequest("GET", url, map[string]string{"product_code": productCode}, nil)
+	if err != nil {
+		log.Printf("action=GetMarket err=%s", err.Error())
+		return nil, err
+	}
+	var ticker Ticker
+	err = json.Unmarshal(resp, &ticker)
+	if err != nil {
+		log.Printf("action=GetMarket err=%s", err.Error())
+		return nil, err
+	}
+	return &ticker, nil
+}
